@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHONEPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #457b9d;
+    }
+
+    #main {
+        width: 340px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 25px;
+        height: 551px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #secondMain {
+        width: 340px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 25px;
+    }
+
+    #category {
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        color: rgb(100, 99, 99);
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 23px;
+    }
+
+    .related {
+        width: 50px;
+    }
+
+    #saperator {
+        width: 213px;
+        height: 2px;
+        margin: auto;
+        background-color: #48cae4;
+    }
+
+    #paymentCon {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin-top: 9px;
+    }
+
+    #imagesSec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #imagesSec>img {
+        width: 30px;
+        margin-right: 13px;
+    }
+
+    #secparti {
+        width: 100%;
+        height: 5px;
+        background-color: #48cae4;
+        margin-top: 14px;
+    }
+
+    #information {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px;
+        color: rgb(100, 99, 99);
+    }
+
+    #cardDetails {
+        width: 85%;
+        margin: auto;
+        margin-top: 25px;
+    }
+
+    #cardDetails>p {
+        font-family: 'Poppins', sans-serif;
+        color: rgb(100, 99, 99);
+        font-size: 11px;
+    }
+
+    #cardDetails>input {
+        width: 100%;
+        height: 38px;
+        border: 1px solid rgb(133, 131, 131);
+        outline: none;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 6px;
+        border-radius: 4px;
+        padding: 0px 23px;
+        letter-spacing: 3px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+
+    #name {
+        width: 85%;
+        margin: auto;
+        margin-top: 25px;
+    }
+
+    #name>p {
+        font-family: 'Poppins', sans-serif;
+        color: rgb(100, 99, 99);
+        font-size: 11px;
+    }
+
+    #name>input {
+        width: 100%;
+        height: 38px;
+        border: 1px solid rgb(133, 131, 131);
+        outline: none;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 6px;
+        border-radius: 4px;
+        padding: 0px 23px;
+        letter-spacing: 3px;
+    }
+
+    #untilValidate {
+        width: 85%;
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+
+    }
+
+    .smallVal {
+        width: 50%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+    }
+
+    .smallVal>input {
+        width: 90%;
+        height: 38px;
+        letter-spacing: 7px;
+        border: 1px solid rgb(133, 131, 131);
+        border-radius: 4px;
+        outline: none;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        padding: 0px 12px;
+    }
+
+    #warnInfo {
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+        color: rgb(236, 49, 49);
+        font-weight: bold;
+    }
+
+    #payButton {
+        width: 100%;
+        height: 67px;
+        background-color: #48cae4;
+        border: none;
+        outline: none;
+        margin-top: 25px;
+        border-radius: 0px 0px 23px 23px;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    #progress>h3 {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+    }
+
+    #ststusGif {
+        width: 93%;
+    }
+
+    #progressSee {
+        height: 213px;
+    }
+
+    .visibility {
+        display: none;
+    }
+
+    #successTran {
+        width: 100%;
+        text-align: center;
+    }
+
+    #successTran>p {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #successTran>img {
+        width: 60%;
+        margin-top: 16px;
+    }
+
+    #tranButton {
+        padding: 9px 14px;
+        border: none;
+        outline: none;
+        background-color: green;
+        cursor: pointer;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        border-radius: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+
+
+    #failedTran {
+        width: 100%;
+        text-align: center;
+    }
+
+    #failedTran>p {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #failedTran>img {
+        width: 41%;
+        margin-top: 16px;
+    }
+
+    #tranButtonFailed {
+        padding: 9px 14px;
+        border: none;
+        outline: none;
+        background-color: red;
+        cursor: pointer;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        border-radius: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-top: 15px;
+    }
+
+    @media all and (min-width:310px) and (max-width:380px) {
+
+        #main {
+            width: 280px;
+        }
+
+        #secondMain {
+            width: 280px;
+        }
+    }
+
+    @media all and (min-width:0px) and (max-width:309px) {
+
+        #main {
+            width: 260px;
+        }
+
+        #secondMain {
+            width: 260px;
+        }
+
+        #information {
+            font-size: 11px;
+        }
+
+        #warnInfo {
+            font-size: 8px;
+        }
+    }
+</style>
+
+<body>
+    <div id="main">
+
+        <div id="secondMain">
+            <div id="category">
+                <p class="related">Shipping address</p>
+                <p class="related">Billing address</p>
+            </div>
+
+            <div id="saperator"></div>
+            <h3 id="paymentCon">Payment details</h3>
+
+            <div id="imagesSec">
+                <img src="https://traders.studio/wp-content/uploads/2021/03/tarjeta-MasterCard.jpg" alt="">
+                <img src="https://purepng.com/public/uploads/large/purepng.com-visa-logologobrand-logoiconslogos-251519938794uqvcz.png"
+                    alt="">
+                <img src="https://th.bing.com/th/id/R.12c4ad531f746ef15331091ffa160468?rik=BQ8cy7qu9Zvd7w&riu=http%3a%2f%2f3.bp.blogspot.com%2f-MYhh8bQ6MBA%2fU4MBs_aoFRI%2fAAAAAAAACNg%2fnOUU7Bbgu0A%2fw1200-h630-p-k-no-nu%2f001.jpg&ehk=jICcsMvcx%2b1P7U7Ep6BiHJJLWUQFtdMdPGYbm7DLEFk%3d&risl=&pid=ImgRaw&r=0"
+                    alt="">
+            </div>
+
+            <div id="secparti"></div>
+
+            <p id="information">All transactions are secure and encrypted</p>
+
+            <div id="cardDetails">
+                <p>Card number (contain's 16 digit)</p>
+                <input type="number" id="myaccountCard" oninput="cardLength()">
+            </div>
+
+
+            <div id="name">
+                <p>Name on card (Full name)</p>
+                <input type="text" id="thisiscard">
+            </div>
+
+
+            <div id="untilValidate">
+                <div id="mm/yy" class="smallVal">
+                    <p>MM / YY</p>
+                    <input type="text" id="mycount" oninput="addLet()">
+                </div>
+                <div id="cvv" class="smallVal">
+                    <p>CVV</p>
+                    <input type="number" id="thisiscvv" oninput="cvvLen()">
+                </div>
+
+
+            </div>
+
+            <p id="warnInfo">Any wrong & invalid info will failed the transaction </p>
+
+            <button id="payButton" onclick="initialise()" disabled="disabled">Pay ₹40.00</button>
+        </div>
+
+
+
+        <div id="progressSee" class="visibility">
+            <div id="progress">
+                <h3 id="statusInfo">Payment is in Progress....</h3>
+            </div>
+
+            <div id="mainImage">
+                <img id="ststusGif"
+                    src="https://assets.materialup.com/uploads/b68f4460-aaa9-4e19-99d8-232dfea1c537/preview.gif" alt="">
+            </div>
+
+        </div>
+
+
+        <div id="successTran" class="visibility">
+            <p>Transaction Successful!</p>
+            <img src="https://driversed.trubicars.ca/wp-content/uploads/2021/02/tick.png" alt="">
+            <div>
+                <button id="tranButton">Home</button>
+            </div>
+
+        </div>
+
+
+
+        <div id="failedTran" class="visibility">
+            <p>Transaction Failed!</p>
+            <img src="https://cdn1.iconfinder.com/data/icons/ui-6/502/alert-512.png" alt="">
+            <div>
+                <button id="tranButtonFailed">Home</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let progress = document.getElementById("progress");
+    let secondMain = document.getElementById("secondMain");
+    let progressSee = document.getElementById("progressSee");
+    let successTran = document.getElementById("successTran");
+    let failedTran = document.getElementById("failedTran");
+    let mycount = document.getElementById("mycount");
+    let thisiscard = document.getElementById("thisiscard");
+    let thisiscvv = document.getElementById("thisiscvv");
+    let myaccountCard = document.getElementById("myaccountCard");
+    let payButton = document.getElementById("payButton");
+    let depend = true;
+    let totalLett;
+    let cardLett;
+    let cvvLett;
+
+    function initialise() {
+        secondMain.classList.add("visibility");
+        progressSee.classList.remove("visibility");
+        mainPart().then((res) => {
+            progressSee.classList.add("visibility");
+            successTran.classList.remove("visibility");
+        }).catch((err) => {
+            progressSee.classList.add("visibility");
+            failedTran.classList.remove("visibility");
+        })
+    }
+
+    function mainPart() {
+        if (cardLett == 16 && cvvLett == 3) {
+            depend = true;
+        }
+        else {
+            depend = false;
+        }
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (depend == true) {
+                    resolve("Transaction Successful!");
+                }
+                else {
+                    reject("Transaction Failed!");
+                }
+
+            }, 5000);
+
+        })
+        return promise;
+    }
+
+    successTran.addEventListener("click", () => {
+        window.location.href = "phonepe.html";
+    })
+
+    failedTran.addEventListener("click", () => {
+        window.location.href = "phonepe.html";
+    })
+
+    function addLet() {
+        totalLett = mycount.value.length;
+        if (totalLett == 2) {
+            mycount.value = mycount.value + "/";
+        }
+    }
+
+    function cardLength() {
+        cardLett = myaccountCard.value.length;
+        if (cardLett > 3 && cvvLett > 1) {
+            payButton.removeAttribute('disabled');
+        }
+    }
+
+    function cvvLen() {
+        cvvLett = thisiscvv.value.length;
+        if (cardLett > 3 && cvvLett > 1) {
+            payButton.removeAttribute('disabled');
+        }
+    }
+
+</script>
