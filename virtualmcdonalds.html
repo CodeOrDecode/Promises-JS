@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIRTUAL MCDONALD'S</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #mainPart {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            width: 500px;
+            height: 560px;
+            background-color: #f5ebe0;
+            border-radius: 30px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6a7;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .fontCorrect {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .allcheckboxes {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .setProcressHead {
+            font-size: 19px;
+        }
+
+        .mainImage1 {
+            width: 300px !important;
+        }
+
+
+        #image {
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        #button {
+            text-align: center;
+        }
+
+        .visible {
+            visibility: hidden;
+        }
+
+        #mainButton {
+            padding: 6px 7px;
+            background-color: #fcbf49;
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 14px;
+        }
+
+        #homeButton {
+            padding: 6px 7px;
+            background-color: #fcbf49;
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 14px;
+            margin-left: 8px;
+        }
+
+        .display {
+            display: none;
+        }
+
+        #orderId {
+            font-family: 'Poppins', sans-serif;
+            text-align: right;
+            padding-right: 16px;
+            font-size: 14px;
+            margin-top: 12px;
+            color: #fcbf49;
+            ;
+        }
+
+        #aware {
+            font-family: 'Poppins', sans-serif;
+            color: red;
+            text-align: center;
+            font-size: 13px;
+            margin-top: 14px;
+        }
+
+        .thisIsDisabled {
+            background-color: #f1e3c5 !important;
+        }
+
+        @media all and (min-width:410px) and (max-width:600px) {
+            #mainPart {
+                width: 400px;
+                height: 483px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .setProcressHead {
+                font-size: 14px;
+            }
+
+            .mainImage1 {
+                width: 240px !important;
+            }
+
+
+            .fontCorrect {
+                font-size: 13px;
+            }
+
+            #mainButton {
+                padding: 4px 5px;
+                font-size: 11px;
+            }
+
+            #homeButton {
+                padding: 4px 5px;
+                font-size: 11px;
+            }
+
+            #aware {
+                font-size: 11px;
+            }
+        }
+
+
+        @media all and (min-width:367px) and (max-width:409px) {
+            #mainPart {
+                width: 343px;
+                height: 458px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .setProcressHead {
+                font-size: 14px;
+            }
+
+            .mainImage1 {
+                width: 240px !important;
+            }
+
+
+            .fontCorrect {
+                font-size: 13px;
+            }
+
+            #mainButton {
+                padding: 4px 5px;
+                font-size: 11px;
+            }
+
+            #homeButton {
+                padding: 4px 5px;
+                font-size: 11px;
+            }
+
+            #aware {
+                font-size: 11px;
+                margin-top: 7px;
+            }
+
+            .setProcressHead {
+                font-size: 12px;
+            }
+        }
+
+
+        @media all and (min-width:280px) and (max-width:366px) {
+            #mainPart {
+                width: 270px;
+                height: 433px;
+            }
+
+            h1 {
+                font-size: 16px;
+            }
+
+            .setProcressHead {
+                font-size: 11px;
+            }
+
+            .mainImage1 {
+                width: 200px !important;
+            }
+
+
+            .fontCorrect {
+                font-size: 13px;
+            }
+
+            #mainButton {
+                padding: 4px 5px;
+                font-size: 11px;
+            }
+
+            #homeButton {
+                padding: 4px 5px;
+                font-size: 11px;
+            }
+
+            #aware {
+                font-size: 11px;
+            }
+
+            #orderId {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mainPart">
+        <h1>Food Ordering System</h1>
+        <p id="orderId" class="display">Your Order Id is: 78945467</p>
+        <div id="progress">
+
+            <h1 id="processHead" class="setProcressHead visible">Preparation is in Progress</h1>
+        </div>
+        <div id="image">
+            <img id="mainImage" class="mainImage1"
+                src="https://www.radiustheme.com/wp-content/uploads/2022/04/fm-banner-animation-01.png" alt="">
+        </div>
+
+        <div class="allcheckboxes">
+            <input type="checkbox" onclick="checkMeasure()" value="Burger">
+            <label class="fontCorrect">Burger</label>
+            <input type="checkbox" onclick="checkMeasure()" value="Pasta">
+            <label class="fontCorrect">Pasta</label>
+            <input type="checkbox" onclick="checkMeasure()" value="French fries">
+            <label class="fontCorrect">French fries</label>
+
+        </div>
+        <div class="allcheckboxes">
+            <input type="checkbox" onclick="checkMeasure()" value="Sandwich">
+            <label class="fontCorrect">Sandwich</label>
+            <input type="checkbox" onclick="checkMeasure()" value="Momos">
+            <label class="fontCorrect">Momos</label>
+            <input type="checkbox" onclick="checkMeasure()" value="Samosa">
+            <label class="fontCorrect">Samosa</label>
+
+        </div>
+        <div id="button">
+            <button id="mainButton" onclick="orderFood()">Order Food</button>
+            <button class="display" id="homeButton" onclick="goToHome()">Home</button>
+        </div>
+        <p id="aware" class="display">Please select one food item at a time</p>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let progress = document.getElementById("progress");
+    let aware = document.getElementById("aware");
+    function checkMeasure() {
+        let totalCheck = document.querySelectorAll("input:checked");
+        console.log(totalCheck);
+        if (totalCheck.length > 1) {
+            let mainButton = document.getElementById("mainButton");
+            mainButton.setAttribute("disabled", "disabled");
+            aware.classList.remove("display");
+            mainButton.classList.add("thisIsDisabled");
+        }
+        else {
+            mainButton.removeAttribute("disabled");
+            aware.classList.add("display");
+            mainButton.classList.remove("thisIsDisabled");
+        }
+
+    }
+
+    function orderFood() {
+        let foodItem = document.querySelector("input:checked");
+        let orderId = document.getElementById("orderId");
+        let foodItemValue = foodItem.value;
+        let processHead = document.getElementById("processHead");
+        let mainImage = document.getElementById("mainImage");
+        orderId.classList.add("display");
+
+        mainImage.setAttribute("src", "https://acelet.com/images/loading.gif");
+        processHead.classList.remove("visible");
+        processHead.innerText = `${foodItemValue} Preparation is in Process.........`;
+        progress.append(processHead);
+        mainPart().then((res) => {
+            let no = Math.floor((Math.random() * 999999999) + 1);
+            let mainImage = document.getElementById("mainImage");
+            let homeButton = document.getElementById("homeButton");
+            let orderId = document.getElementById("orderId");
+            mainImage.setAttribute("src", res.show);
+            homeButton.classList.remove("display");
+            orderId.classList.remove("display");
+            orderId.innerText = `Your Order Id is: ${no}`;
+            processHead.classList.remove("visible");
+            processHead.innerText = `Your ${res.name} is now ready to serve!!!!😁😁`;
+        }).catch((err) => {
+            console.log(err);
+        })
+
+    }
+
+    let allImages = [
+        { name: "Burger", image: "https://i0.wp.com/thenutritionadventure.com/wp-content/uploads/2017/07/PourHouseAmericanBurger.jpg?resize=5236%2C3490" },
+        { name: "Pasta", image: "https://th.bing.com/th/id/OIP.64vXNk6FRg6TzVCW7u2zLAHaFj?rs=1&pid=ImgDetMain" },
+        { name: "French fries", image: "https://static.fanpage.it/wp-content/uploads/sites/22/2020/09/iStock-618214356.jpg" },
+
+
+
+        { name: "Sandwich", image: "https://th.bing.com/th/id/R.c580f6c3549ed545662dfa97b2461e33?rik=uTIy8WznXorEEQ&riu=http%3a%2f%2fwww.taste.com.au%2fimages%2frecipes%2fsfi%2f2011%2f11%2fcucumber-sandwiches-with-lemon-herb-butter-23299_l.jpeg&ehk=1POIVQrYxPCtjYI4xXmdK%2bDTx8EWOsPVxoEn9bV9ljM%3d&risl=&pid=ImgRaw&r=0" },
+
+        { name: "Momos", image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/rixnihffq2a6euu8vz0q" },
+        { name: "Samosa", image: "https://i.pinimg.com/originals/e0/1d/72/e01d722c6c1919499376c27e687ffdd4.jpg" },
+    ]
+
+
+    function mainPart() {
+        let foodItem = document.querySelector("input:checked");
+
+        let imageSort = allImages.filter((ele) => {
+            if (ele.name == foodItem.value) {
+                return ele.image;
+            }
+        })
+
+        console.log(imageSort[0].image)
+
+        let mainPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({ name: foodItem.value, show: imageSort[0].image });
+            }, 5000);
+        })
+        return mainPromise;
+    }
+
+
+    function goToHome() {
+        window.location.href = "virtualmcdonalds.html";
+    }
+
+</script>
